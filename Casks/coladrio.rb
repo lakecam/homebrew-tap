@@ -1,6 +1,6 @@
 cask "coladrio" do
-  version "0.4.0"
-  sha256 "caaf04d3b94dbba9219437e809bce5dfc5b6ecb1c86dc283d4c9cc310e2a5c01"
+  version "0.5.0"
+  sha256 "7827b789d5edceb1fa0de048d6d956185a058b64a93930f86e13559a1e7f6738"
 
   url "https://github.com/lakecam/homebrew-tap/releases/download/coladrio-v#{version}/Coladrio-#{version}.dmg"
   name "Coladrio"
