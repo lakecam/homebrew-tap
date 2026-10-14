@@ -7,15 +7,14 @@ cask "coladrio" do
   desc "Native Mac library for the photos, videos and files you already have"
   homepage "https://github.com/lakecam/homebrew-tap"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   app "Coladrio.app"
 
   # The build is not notarised yet; let it open without the Gatekeeper prompt.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Coladrio.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Coladrio.app"]
   end
 
   zap trash: [
